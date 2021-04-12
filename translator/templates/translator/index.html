@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <title>Host Cloud - Free HTML5 Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'translator/vendor/bootstrap/css/bootstrap.min.css' %}?{% now "U" %}" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'translator/assets/css/fontawesome.css' %}?{% now "U" %}">
+    <link rel="stylesheet" href="{% static 'translator/assets/css/templatemo-host-cloud.css' %}?{% now "U" %}">
+    <link rel="stylesheet" href="{% static 'translator/assets/css/owl.css' %}?{% now "U" %}">
+
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h2>EXO</h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'index' %}">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="functional-buttons">
+            <ul>
+              <li><a href="{% url 'login' %}">Login</a></li>
+              <li><a href="{% url 'register' %}">Register</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="header-text caption">
+              <h2>Enter legalese:</h2>
+              <div id="search-section">
+              	<form id="suggestion_form" name="gs" method="get" action="{% url 'result' %}">
+                <div class="searchText">
+                  
+                  <input type="text" name="text" class="searchText" placeholder="According to article 3.45654..." autocomplete="on">
+                </div>
+                    <input type="submit" name="results" class="main-button" value="Translate">
+                 </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner Ends Here -->
+
+    <!-- Trusted Starts Here -->
+    <div class="trusted-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="trusted-section-heading">
+              <h4>TRUSTED BY LAWYERS THEMSELVES</h4>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="owl-trusted owl-carousel">
+              <div class="trusted-item">
+                <img src="{% static 'translator/assets/images/loi.jpg' %}" alt="trusted 1">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Trusted Ends Here -->
+
+
+    <!-- Services Starts Here -->
+    <div class="services-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <span>Translation Services</span>
+              <h2>Services we provide</h2>
+                <p>We just want your fucking monney</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="service-item">
+              <i class="fa fa-university"></i>
+              <h4>The power of AI GPT3</h4>
+              <p>We translate the legal text you are to lazy to understand on your own.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Services Ends Here -->
+
+
+    <!-- Pricing Starts Here -->
+    <div class="pricing-section">
+      <div class="background-image-pricing">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="section-heading">
+              <h2>Different pricings for different needs</h2>
+              <p>We actually want to see you burn in hell</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="pricing-item">
+              <h4>Basic account</h4>
+              <div class="price">
+                <h6>$0.00</h>
+              </div>
+              <p>Do you really want us to eat rice all our life?</p>
+              <div class="dev"></div>
+              <ul>
+                <li><i class="fa fa-check"></i>10 translations/week</li>
+                <li><i class="fa fa-check"></i>Our newsletter every year</li>
+                <li><i class="fa fa-check"></i>we sell your data to big brother</li>
+              </ul>
+              <a href="#" class="main-button">Start account</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="pricing-item">
+              <h4>Standard account</h4>
+              <div class="price price-gradient">
+                <h6>$30.00</h6>
+                <span>monthly</span>
+              </div>
+              <p>The standard account you can use for day to day legal text translation</p>
+              <div class="dev"></div>
+              <ul>
+                <li><i class="fa fa-check"></i>Up to 500 translations per week</li>
+                <li><i class="fa fa-check"></i>You get our newsletter every two weeks</li>
+                <li><i class="fa fa-check"></i>If we ever create anything else you will get access to the beta in advance</li>
+              </ul>
+              <a href="#" class="gradient-button">Select account</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="pricing-item">
+              <h4>Unlimited admin power</h4>
+              <div class="price">
+                <h6>$10000.00</h6>
+                <span>once</span>
+              </div>
+              <p>Actually buy our website to do what the fuck you want with it</p>
+              <div class="dev"></div>
+              <ul>
+                <li><i class="fa fa-check"></i>Unlimited power on the website</li>
+                <li><i class="fa fa-check"></i>You even get a cup of coffee for free</li>
+              </ul>
+              <a href="#" class="main-button">Call me now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pricing Ends Here -->
+
+
+    <!-- Features Starts Here -->
+    <div class="features-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <span>Best Quality for you</span>
+              <h2>Cloud Features</h2>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-item">
+              <div class="icon">
+                <img src="assets/images/feature-01.png" alt="">
+              </div>
+              <h4>Load Balanced</h4>
+              <p>Nulla nisl ex, vehicula in urna nec, commodo consectetur augue. Vivamus nec metus mauris. Praesent lacinia tempus urna.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-item">
+              <div class="icon">
+                <img src="{% static 'translator/assets/images/feature-01.png' %}"  alt="">
+              </div>
+              <h4>99.9% Uptime Guaranteed</h4>
+              <p>Lorem ipsum dolor ame taxidermy sriracha cardigan salvia actually vice migas en pin sustainable carry scenester.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-item">
+              <div class="icon">
+                <img src="{% static 'translator/assets/images/feature-01.png' %}"  alt="">
+              </div>
+              <h4>Top Reliability</h4>
+              <p>Lorem ipsum dolor ame taxidermy sriracha cardigan salvia actually vice migas en pin sustainable carry scenester.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-item">
+              <div class="icon">
+                <img src="{% static 'translator/assets/images/feature-01.png' %}"  alt="">
+              </div>
+              <h4>High Security</h4>
+              <p>Lorem ipsum dolor ame taxidermy sriracha cardigan salvia actually vice migas en pin sustainable carry scenester.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-item">
+              <div class="icon">
+                <img src="{% static 'translator/assets/images/feature-01.png' %}"  alt="">
+              </div>
+              <h4>Quality Hardwares</h4>
+              <p>Lorem ipsum dolor ame taxidermy sriracha cardigan salvia actually vice migas en pin sustainable carry scenester.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-item">
+              <div class="icon">
+                <img src="{% static 'translator/assets/images/feature-01.png' %}"  alt="">
+              </div>
+              <h4>Network Solutions</h4>
+              <p>Lorem ipsum dolor ame taxidermy sriracha cardigan salvia actually vice migas en pin sustainable carry scenester.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Features Ends Here -->
+
+
+    <!-- Testimonials Starts Here -->
+    <div class="testimonials-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <span>Testimonials</span>
+              <h2>What they say about us</h2>
+            </div>
+          </div>
+          <div class="col-md-10 offset-md-1">
+            <div class="owl-testimonials owl-carousel">
+              <div class="testimonial-item">
+                <div class="icon">
+                  <i class="fa fa-quote-right"></i>
+                </div>
+                <p>"The junkyard dog used to tell us about the legendary service they offer. They are geniuses."</p>
+                <h4>Pascal Danger</h4>
+                <span>Assureur chez "ça arrive pas qu'o autres" assurance</span>
+              </div>
+              <div class="testimonial-item">
+                <div class="icon">
+                  <i class="fa fa-quote-right"></i>
+                </div>
+                <p>"Quisque lacinia sed velit et maximus. Quisque dictum, lacus a malesuada finibus, arcu magna luctus risus, eu accumsan risus elit vitae lacus."</p>
+                <h4>Vinny Smart</h4>
+                <span>Digital Marketer</span>
+              </div>
+              <div class="testimonial-item">
+                <div class="icon">
+                  <i class="fa fa-quote-right"></i>
+                </div>
+                <p>"Vestibulum mauris ipsum, tempor tincidunt justo sit amet, bibendum tincidunt dui. Aenean molestie, odio quis viverra ultricies, leo tellus lacinia neque, sit amet maximus tortor nunc aliquet felis."</p>
+                <h4>Trevor Liam</h4>
+                <span>Technology Chef</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonials Ends Here -->
+
+
+    <!-- Footer Starts Here -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>About Us</h2>
+              </div>
+              <p>Exo provides the best legal translation service there is out there.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>Types of accounts</h2>
+              </div>
+              <ul class="footer-list">
+                <li><a href="#">Basic free account</a></li>
+                <li><a href="#">Standard account</a></li>
+                <li><a href="#">Unilimited admin access</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>Useful Links</h2>
+              </div>
+              <ul class="footer-list">
+                <li><a href="#">My fb page</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>More Information</h2>
+              </div>
+              <ul class="footer-list">
+                <li>Phone: <a href="#">0619451463</a></li>
+                <li>Email: <a href="#">andrew.mcdonald2@hotmail.fr/a></li>
+                <li>Support: <a href="#">support@company.com</a></li>
+                <li>Website: <a href="#">www.company.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="sub-footer">
+              <p>Copyright &copy; 2021 EXO company
+				- Designed by Jean Lelong and Andrew McDonald</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Ends Here -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'translator/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'translator/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Additional Scripts -->
+    <script src="{% static 'translator/assets/js/custom.js' %}"></script>
+    <script src="{% static 'translator/assets/js/owl.js' %}"></script>
+    <script src="{% static 'translator/assets/js/accordions.js' %}"></script>
+
+
+    <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+
+  </body>
+</html>
