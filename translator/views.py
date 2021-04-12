@@ -49,6 +49,7 @@ def result(request):
 
     inputs = [examples[i][:-1] for i in range(0, 12, 3)]
     outputs = [examples[i][:-1] for i in range(1, 11, 3)]
+    j = 0
 
     for i in range(4):
         gpt.add_example(Example(inputs[i], outputs[i]))
