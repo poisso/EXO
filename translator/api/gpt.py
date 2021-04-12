@@ -4,6 +4,8 @@ API."""
 import openai
 import uuid
 
+"""bonjour"""
+
 
 def set_openai_key(key):
     """Sets OpenAI key."""
