@@ -33,10 +33,6 @@ def result(request):
     with open("translator/data/examples_exo.txt") as f:
         examples = f.readlines()
 
-    # test = "Subject to your compliance with these Conditions of Use and any Service Terms, and your payment of any " \
-    #        "applicable fees, Amazon or its content providers grant you a limited, non-exclusive, non-transferable, " \
-    #        "non-sublicensable license to access and make personal and non-commercial use of the Amazon Services. "
-
     gpt = GPT(engine='davinci',
               temperature=0,
               max_tokens=100,
