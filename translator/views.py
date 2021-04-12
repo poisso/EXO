@@ -5,7 +5,7 @@ from .decorators import user_session_cap
 
 from .gpt import *
 
-
+from django.conf import settings
 
 def index(request):
     ## if the dic key doesn't yet exist it is created and init with
@@ -49,12 +49,11 @@ def result(request):
 
     inputs = [examples[i][:-1] for i in range(0, 12, 3)]
     outputs = [examples[i][:-1] for i in range(1, 11, 3)]
-    j = 0
 
     for i in range(4):
         gpt.add_example(Example(inputs[i], outputs[i]))
 
-    set_openai_key("sk-F4KccJ8wMiG3ei2F9fxrcT7NktZu924cYxmtzdTx")
+    set_openai_key(settings.API_KEY)
 
     answer = gpt.get_top_reply(text)
 

@@ -11,6 +11,13 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+
+import environ
+
+env = environ.Env()
+env.read_env()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'n4z)!25vmm^&bzmzrp^_82!93w*&2#wx)mo%8@u24m3dutsg&$'
+SECRET_KEY = "SECRET_KEY"
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -128,8 +136,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+API_KEY = os.environ.get("API_KEY")
+
 
 
 
 LOGIN_REDIRECT_URL = 'index'
 LOGIN_URL = 'login'
+
