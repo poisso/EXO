@@ -5,7 +5,7 @@ from .decorators import user_session_cap
 
 from .gpt import *
 
-
+from django.conf import settings
 
 def index(request):
     ## if the dic key doesn't yet exist it is created and init with
@@ -33,6 +33,10 @@ def result(request):
     with open("translator/data/examples_exo.txt") as f:
         examples = f.readlines()
 
+    # test = "Subject to your compliance with these Conditions of Use and any Service Terms, and your payment of any " \
+    #        "applicable fees, Amazon or its content providers grant you a limited, non-exclusive, non-transferable, " \
+    #        "non-sublicensable license to access and make personal and non-commercial use of the Amazon Services. "
+
     gpt = GPT(engine='davinci',
               temperature=0,
               max_tokens=100,
@@ -43,13 +47,13 @@ def result(request):
               output_suffix="\n\n",
               append_output_prefix_to_query=True)
 
-    inputs = [examples[i][:-1] for i in range(0, 8, 2)]
-    outputs = [examples[i][:-1] for i in range(1, 9, 2)]
+    inputs = [examples[i][:-1] for i in range(0, 12, 3)]
+    outputs = [examples[i][:-1] for i in range(1, 11, 3)]
 
     for i in range(4):
         gpt.add_example(Example(inputs[i], outputs[i]))
 
-    set_openai_key("sk-F4KccJ8wMiG3ei2F9fxrcT7NktZu924cYxmtzdTx")
+    set_openai_key(settings.API_KEY)
 
     answer = gpt.get_top_reply(text)
 
