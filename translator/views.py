@@ -28,7 +28,7 @@ def index(request):
 @login_required
 @user_session_cap
 def result(request):
-    text = request.GET["text"]
+    text = request.GET["text"].strip()
 
     with open("translator/data/examples_exo.txt") as f:
         examples = f.readlines()
