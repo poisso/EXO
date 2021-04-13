@@ -46,6 +46,7 @@ class GPT:
     """
     def __init__(self,
                  engine='davinci',
+                 instruct="",
                  temperature=0.5,
                  max_tokens=100,
                  frequency_penalty=0,
@@ -57,6 +58,10 @@ class GPT:
                  append_output_prefix_to_query=False):
         self.examples = {}
         self.engine = engine
+        if instruct:
+            self.instruct = instruct + "\n\n"
+        else:
+            self.instruct = instruct
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.frequency_penalty = frequency_penalty
@@ -108,7 +113,7 @@ class GPT:
 
     def craft_query(self, prompt):
         """Creates the query for the API request."""
-        q = self.get_prime_text(
+        q = self.instruct + self.get_prime_text(
         ) + self.input_prefix + prompt + self.input_suffix
         if self.append_output_prefix_to_query:
             q = q + self.output_prefix

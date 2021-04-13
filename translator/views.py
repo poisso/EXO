@@ -38,13 +38,14 @@ def result(request):
     #        "non-sublicensable license to access and make personal and non-commercial use of the Amazon Services. "
 
     gpt = GPT(engine='davinci-instruct-beta',
+              instruct="Rewrite those sentences from legalese to plain English.",
               temperature=0,
-              max_tokens=100,
+              max_tokens=150,
               frequency_penalty=1,
               input_prefix="Legalese: ",
               input_suffix="\n",
               output_prefix="Plain English:",
-              output_suffix="\n\n",
+              output_suffix="\n###\n",
               append_output_prefix_to_query=True)
 
     inputs = [examples[i][:-1] for i in range(0, 8, 2)]
