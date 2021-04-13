@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
   <head>
 
@@ -75,12 +75,22 @@
 
     <!-- Page Content -->
     <!-- Heading Starts Here -->
-    <div class="page-heading header-text">
+    <div class="banner">
       <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <div class="header-text caption">
-                    <h1>{{ text }}</h1>
+                     <div id="search-section">
+                         <h1>Legalese:</h1>
+                         <p class="searchText">
+                            {{ input }}
+                        </p>
+                         <h1>Plain English:</h1>
+                        <p class="searchText">
+                            {{ text }}
+                        </p>
+
+                     </div>
                 </div>
             </div>
         </div>
@@ -161,7 +171,7 @@
     <script src="{% static 'translator/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
     <!-- Additional Scripts -->
-    <script src="{% static 'translator/assets/js/custom.js' %}"></script>
+    <script src="{% static 'translator/assets/js/custom.js' %}?{% now "U" %}"></script>
     <script src="{% static 'translator/assets/js/owl.js' %}"></script>
     <script src="{% static 'translator/assets/js/accordions.js' %}"></script>
 
@@ -175,6 +185,11 @@
           t.style.color='#fff';
           }
       }
+    </script>
+    <script>
+        window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+        }
     </script>
 
   </body>

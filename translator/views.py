@@ -58,7 +58,7 @@ def result(request):
 
     answer = gpt.get_top_reply(text)
 
-    return render(request, "translator/result.html", {"text":answer})
+    return render(request, "translator/result.html", {"text":answer, "input":text})
 
 def about(request):
     return render(request, "translator/about.html")

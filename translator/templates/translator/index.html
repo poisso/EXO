@@ -38,7 +38,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>EXO</h2></a>
+          <a class="navbar-brand" href="{% url "index" %}"><h2>EXO</h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -395,7 +395,7 @@
     <script src="{% static 'translator/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
     <!-- Additional Scripts -->
-    <script src="{% static 'translator/assets/js/custom.js' %}"></script>
+    <script src="{% static 'translator/assets/js/custom.js' %}?{% now "U" %}"></script>
     <script src="{% static 'translator/assets/js/owl.js' %}"></script>
     <script src="{% static 'translator/assets/js/accordions.js' %}"></script>
 
@@ -409,6 +409,12 @@
           t.style.color='#fff';
           }
       }
+    </script>
+
+    <script>
+        window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+        }
     </script>
 
   </body>
