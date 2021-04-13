@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from .decorators import user_session_cap
 
-from .gpt import *
+from translator.api.gpt import *
 
 from django.conf import settings
 
