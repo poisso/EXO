@@ -83,11 +83,14 @@
               <h2>Enter legalese:</h2>
               <div id="search-section">
               	<form id="suggestion_form" name="gs" method="get" action="{% url 'result' %}">
-                <div class="searchText">
-                  
-                  <input type="text" name="text" class="searchText" placeholder="According to article 3.45654..." autocomplete="on">
-                </div>
-                    <input type="submit" name="results" class="main-button" value="Translate">
+                    <div class="text-box">
+
+                            <textarea type="text" name="text" class="searchText" aria-label="With textarea" placeholder="According to article 3.45654..." autocomplete="on"></textarea>
+{#                          <input type="text" name="text" class="searchText" placeholder="According to article 3.45654..." autocomplete="on">#}
+
+                            <input type="submit" name="results" class="main-button" value="Translate">
+
+                     </div>
                  </form>
               </div>
             </div>

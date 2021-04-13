@@ -149,8 +149,7 @@ a.gradient-button:hover {
   animation-fill-mode: both;
   position: absolute;
   opacity: 0;
-  width: 50px;
-  height: 50px;
+
   -webkit-animation: jumper 1s 0s linear infinite;
   animation: jumper 1s 0s linear infinite;
 }
@@ -369,9 +368,7 @@ header {
 	font-weight: 700;
 	color: #fff;
 }
-.banner #search-section fieldset {
-	display: inline-block;
-}
+
 .banner #search-section {
 	position: relative;
 }
@@ -389,10 +386,32 @@ header {
 	letter-spacing: 0.5px;
 	margin-bottom: 30px;
 }
+
+.banner #search-section textarea.searchText {
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 570px;
+	min-width: 280px;
+	height: 300px;
+	background-color: transparent;
+	border: 1px solid #fff;
+	padding: 0px 15px;
+	color: #fff;
+	outline: none;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	margin-bottom: 30px;
+	resize: none;
+}
+
+
 .banner #search-section input.main-button {
-	position: absolute;
+	position: relative;
 	top: 0;
 	right: 0;
+	width: 300px;
 	outline: none;
 	cursor: pointer;
 	display: inline-block;
@@ -400,7 +419,8 @@ header {
 	line-height: 50px;
 	padding: 0px 20px;
 	border: none;
-	margin-left: 10px;
+	margin-left: auto;
+	margin-right: auto;
 	background-color: #00bcd4;
 	color: #fff;
 	text-transform: uppercase;
@@ -410,9 +430,18 @@ header {
 	transition: all 0.5s;
 	margin-bottom: 30px;
 }
+.banner #search-section input.main-button:hover{
+	background-color: #00a4b9;
+}
 .banner #search-section button:hover {
 	background-color: #00a4b9;
 }
+
+.text-box{
+	display: flex;
+	flex-direction: column;
+}
+
 #search-section ul {
 	padding: 0;
 	margin: 0;
