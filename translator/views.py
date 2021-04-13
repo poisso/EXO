@@ -37,20 +37,18 @@ def result(request):
     #        "applicable fees, Amazon or its content providers grant you a limited, non-exclusive, non-transferable, " \
     #        "non-sublicensable license to access and make personal and non-commercial use of the Amazon Services. "
 
-    gpt = GPT(engine='davinci',
+    gpt = GPT(engine='davinci-instruct-beta',
               temperature=0,
               max_tokens=100,
               frequency_penalty=1,
-              input_prefix="Legalese:",
+              input_prefix="Legalese: ",
               input_suffix="\n",
               output_prefix="Plain English:",
               output_suffix="\n\n",
               append_output_prefix_to_query=True)
 
     inputs = [examples[i][:-1] for i in range(0, 8, 2)]
-    outputs = [examples[i][:-1] for i in range(1, 9, 2)]
-
-    """bonjour"""
+    outputs = [" " + examples[i][:-1] for i in range(1, 9, 2)]
 
     for i in range(4):
         gpt.add_example(Example(inputs[i], outputs[i]))
