@@ -1,6 +1,6 @@
 andrew:
-- faire en sorte qu'il ne soit plus possible de login ou de register une fois que
+-faire en sorte qu'il ne soit plus possible de login ou de register une fois que
 l'on s'est login
-- zone de texte aggradissable sur la page principale
-- cap du nombre de requete max par heure
+-zone de texte aggradissable sur la page principale
+-cap du nombre de requete max par heure
 jean:
