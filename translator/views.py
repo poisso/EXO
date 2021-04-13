@@ -48,10 +48,10 @@ def result(request):
               output_suffix="\n###\n",
               append_output_prefix_to_query=True)
 
-    inputs = [examples[i][:-1] for i in range(0, 5, 2)]
-    outputs = [" " + examples[i][:-1] for i in range(1, 6, 2)]
+    inputs = [examples[i][:-1] for i in [0, 2, 4]]
+    outputs = [" " + examples[i][:-1] for i in [1, 3, 5]]
 
-    for i in range(4):
+    for i in range(3):
         gpt.add_example(Example(inputs[i], outputs[i]))
 
     set_openai_key(settings.API_KEY)
