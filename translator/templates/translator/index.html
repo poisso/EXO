@@ -10,7 +10,7 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Host Cloud - Free HTML5 Bootstrap Template</title>
+    <title>EXO</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'translator/vendor/bootstrap/css/bootstrap.min.css' %}?{% now "U" %}" rel="stylesheet">
@@ -58,10 +58,16 @@
             </ul>
           </div>
           <div class="functional-buttons">
+            {% if user.is_autenticated %}
+            <ul>
+              <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+            {% else %}
             <ul>
               <li><a href="{% url 'login' %}">Login</a></li>
               <li><a href="{% url 'register' %}">Register</a></li>
             </ul>
+            {% endif %}
           </div>
         </div>
       </nav>
